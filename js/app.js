@@ -73,5 +73,5 @@ function soma(n1, n2) {
   var resultado = soma(5,5)
   console.log(resultado)
 
-
+/////aula 14 à 18/////
 
