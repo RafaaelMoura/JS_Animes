@@ -42,7 +42,36 @@ var animes = true
  var total = n1/n2
  console.log(total)
 
+ //Operadores de Comparação
 
+ var v1 = 5
+ var v2 = '5'
+
+ var resultado = v1 !== v2
+ console.log(resultado)
+
+ //Funções
+
+ function soma (n1, n2) {
+    console.log(n1 + n2)
+ }
+  soma(5,100)
+
+/// Boas vindas
+
+function boasvindas(nome){
+    alert (nome +', seja bem Vindo(a)')
+}
+
+boasvindas('Otaku')
+
+// Retorno
+
+function soma(n1, n2) {
+    return n1 + n2
+ }
+  var resultado = soma(5,5)
+  console.log(resultado)
 
 
 
