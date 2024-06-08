@@ -1,3 +1,4 @@
+
 console.log ('Treinameto com JS')
 
 //Variáveis////////
