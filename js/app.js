@@ -15,7 +15,7 @@ document.getElementById('user-name').innerHTML = userName
  console.log(typeof idade)
  console.log(typeof true)
 
-// Operadores Matematicos 
+//Operadores Matematicos 
 
  var n1 = 5
  var n2 = 5
@@ -23,7 +23,7 @@ document.getElementById('user-name').innerHTML = userName
  var total = n1 + n2
  console.log(total)
 
-// - Tipo Texto 
+//Tipo Texto 
 
  var n1 = 5
  var n2 = 'cinco'
@@ -31,7 +31,7 @@ document.getElementById('user-name').innerHTML = userName
  var total = n1 + parseInt(n2)
  console.log(total)
 
- // - números com pontos
+ //números com pontos
 
  var n1 = 5
  var n2 = 2.5
