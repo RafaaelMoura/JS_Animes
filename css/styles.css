@@ -1,31 +1,46 @@
 body {
-   background-image: url(../images/anime.jpg);
+   background-image: url(../background/background.jpg);
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
    background-color: #111;
-   color: #2c1eee;
+   color: hsl(32, 92%, 51%);  
+   font-family: 'handlee', cursive;
+   font-size: larger;
+   font-weight: 200;
 }
 
+.title{
+   width: 240px;
+}
+
+ 
 #app{
    text-align: center;
    width: 1200px;
    margin: auto;
+   font-size: larger;
+   text-align: center;
 }
 .Animes {
    display: grid;
    grid-template-columns: repeat(4, 1fr);
 }
 .item img {
-   max-width: 180px;
+   max-width: 170px;
 }
 
 .top {
+
    padding: 40px;
    display: grid;
    grid-template-columns: 1fr 1fr;
    align-items: center;
    text-align: left;
+   font-size: large;
+}
+.tjsanime {
+   max-width: 480px;
 }
 
 .top h1 {
@@ -42,30 +57,63 @@ body {
    text-align: right;
 }
 
-.characters {
+.animes {
    display: grid;
    grid-template-columns: repeat(4, 1fr);
 }
 
-.characters .item {
+.animes .item {
    padding: 20px;
 }
 
-.characters .item img {
+.animes .item img {
    width: 100%;
    border-radius: 20%;
    border: 5px #111 solid;
 }
 
-.characters .item img:hover {
-   border: 5px #FD4 solid;
+.animes .item img:hover {
+   border: 5px hsl(32, 92%, 51%) solid;
 }
 
+.animes .item .like material-symbols-outlined{
+   background-color: #424242;
+   color: #FD4;
+    height: 36px;
+    border: 45px;
+    border-radius: 15%;
+    border-radius: unset;
+    min-width: 125px;
+    min-height: 50px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 53px;
+    cursor: pointer;
+    
+}
+
+.animes .item .material-symbols-outlined{
+   background-color: #424242;
+   color: #FD4;
+    height: 36px;
+    border: 45px;
+    border-radius: unset;
+    border-radius: 15%;
+    min-width: 125px;
+    min-height: 50px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 53px;
+    cursor: pointer;
+    
+}
+   
 input {
    padding: 0.75em 1.25em;
    border-radius: 8px;
    border: none;
    font-size: 1rem;
+   font-family: 'handlee', cursive;
 }
 
 button {
@@ -75,5 +123,7 @@ button {
    color: #111;
    font-size: 1rem;
    border: none;
+   font-family: 'handlee', cursive;
+   font-size: large;
 }
 

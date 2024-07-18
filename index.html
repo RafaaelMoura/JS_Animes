@@ -4,80 +4,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JSAnimes</title>
     <link rel="stylesheet" href="./css/styles.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <div id="app">
 
-        <h1>{{ title }}</h1>
-        <small>Olá {{ Username }}</small>
-        <p></p>
+        <div class="top">
+            <div>
+                <img class="title" src="./Titulo/JS-Animes-15-06-2024.png" alt="Titulo">
+                <h1 class="">{{ title }}</h1>
+                <small>Olá {{ Username }}</small>
+        
+            </div>
+    
+           
+            <form>
+                <input placeholder="Busca por nome..." v-model="searchName"/>
+                <button type="button" @click="search()">Buscar</button>
+            </form>
+        </div>
 
+        <div class="animes">
+            <div class="item" v-for="item of animes">
+                <img :src="item.avatar" :alt="item.nome"/>
+                <p>{{item.nome}}</p>
+                <span @click="like(item.nome)" class="like material-symbols-outlined">thumb_up</span>
+                <span @click="remove(item.id)" class="material-symbols-outlined">delete</span>
+                
 
-        <div class="Animes">
-            <div class="item">
-                <img src="images/ataque-dos-titas.webp" alt="Ataque dos Titans"/>
-                <p>Ataque dos Titans</p>
-            </div>
-            <div class="item">
-                <img src="images/code-geass-lelouch-of-the-rebellion.webp" alt="Code Geass Lelouch of the Rebellion"/>
-                <p>Code Geass Lelouch of the Rebellion</p>
-            </div>
-            <div class="item">
-                <img src="images/fullmetal-alchemist.webp" alt="Fullmetal Alchemist"/>
-                <p>Fullmetal Alchemist</p>
-            </div>
-            <div class="item">
-                <img src="images/gto-great-teacher.webp" alt="GTO Great Teacher"/>
-                <p>GTO Great Teacher</p>
-            </div>
-            <div class="item">
-                <img src="images/hataraku-maou-sama.webp" alt="Hataraku Maou Sama"/>
-                <p>Hataraku Maou Sama</p>
-            </div>
-            <div class="item">
-                <img src="images/hunter-x-hunter.webp" alt="Hunter X Hunter"/>
-                <p>Hunter X Hunter</p>
-            </div>
-            <div class="item">
-                <img src="images/no-game-no-life.webp" alt="No Gamer No Life"/>
-                <p>No Gamer No Life</p>
-            </div>
-            <div class="item">
-                <img src="images/noragami.webp" alt="Noragami"/>
-                <p>Noragami</p>
-            </div>
-            <div class="item">
-                <img src="images/one-punch-man.webp" alt="One Punch Man"/>
-                <p>One Punch Man</p>
-            </div>
-            <div class="item">
-                <img src="images/oregairu.webp" alt="Oregairu"/>
-                <p>Oregairu</p>
-            </div>
-            <div class="item">
-                <img src="images/re-zero-kara-hajimeru-isekai-seikatsu.webp" alt="Re Zero Kara Hajimeru isekai Seikatsu"/>
-                <p>Re Zero Kara Hajimeru isekai Seikatsu</p>
-            </div>
-            <div class="item">
-                <img src="images/saiki-kusuo-no-psi-nan.webp" alt="Saiki Kusuo no Psi Nan"/>
-                <p>Saiki Kusuo no Psi Nan</p>
-            </div>
-            <div class="item">
-                <img src="images/shigatsu-wa-kimi-no-uso.webp" alt="Shigatsu Wa Kimi no Uso"/>
-                <p>Shigatsu Wa Kimi no Uso</p>
-            </div>
-            <div class="item">
-                <img src="images/shokugeki-no-souma.webp" alt="Shokugeki no Souma"/>
-                <p>Shokugeki no Souma</p>
-            </div>
-            <div class="item">
-                <img src="images/steins-gate.webp" alt="Steins Gate"/>
-                <p>Steins Gate</p>
-            </div>
-            <div class="item">
-                <img src="images/tengen-toppa-gurren-lagann.webp" alt="Tengen Toppa Gurren Lagann"/>
-                <p>Tengen Toppa Gurren Lagann</p>
             </div>
         </div>
     </div>
